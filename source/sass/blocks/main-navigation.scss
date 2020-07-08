@@ -1,0 +1,21 @@
+.main-navigation {
+  @include list-reset();
+  display: flex;
+  align-items: center;
+  margin-right: 114px;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: center;
+    margin: initial;
+  }
+}
+
+.main-navigation__item:not(:last-of-type) {
+  margin-right: 48px;
+
+  @media (max-width: $mobile-width) {
+    margin-right: initial;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local("Raleway"),
+    local("Raleway Regular"),
+    url("../fonts/ralewayRegular.woff2") format("woff2"),
+    url("../fonts/ralewayRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: local("Raleway Medium"),
+    local("Raleway-Medium"),
+    url("../fonts/ralewayMedium.woff2") format("woff2"),
+    url("../fonts/ralewayMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: local("Raleway Semibold"),
+    local("Raleway-Semibold"),
+    url("../fonts/ralewaySemibold.woff2") format("woff2"),
+    url("../fonts/ralewaySemibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local("Raleway Bold"),
+    local("Ralewa-Bold"),
+    url("../fonts/ralewayBold.woff2") format("woff2"),
+    url("../fonts/ralewayBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: local("Raleway ExtraBold"),
+    local("Raleway-ExtraBold"),
+    url("../fonts/raleway800.woff2") format("woff2"),
+    url("../fonts/raleway800.woff") format("woff");
+}

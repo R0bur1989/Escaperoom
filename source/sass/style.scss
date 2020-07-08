@@ -1,3 +1,8 @@
-h1 {
-  color: red;
-}
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "general";
+@import "blocks/page-header";
+@import "blocks/main-menu";
+@import "blocks/main-navigation";
+@import "blocks/user-navigation.scss";
