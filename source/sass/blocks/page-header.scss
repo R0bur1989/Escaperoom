@@ -27,8 +27,7 @@
     }
 
     @media (max-width: $mobile-width) {
-      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat,
-        url("../img/mainBg-mobile.jpg") no-repeat center 0;
+      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat, url("../img/mainBg-mobile.jpg") no-repeat center 0;
       min-height: 640px;
     }
   }
@@ -61,6 +60,9 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   font-feature-settings: "pnum" on, "lnum" on;
+  padding-right: 30px;
+  position: relative;
+  text-decoration: none;
 
   @media (max-width: $tablet-width) {
     display: block;
@@ -68,21 +70,38 @@
     text-align: right;
   }
 
-  a {
-    display: block;
-    padding-right: 30px;
-    position: relative;
-    color: inherit;
-    text-decoration: none;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    background: url("../img/burger.svg") no-repeat;
+    top: 0;
+    right: 0;
+  }
+}
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 14px;
-      background: url("../img/burger.svg") no-repeat;
-      top: 0;
-      right: 0;
-    }
+.page-header--closed .main-menu {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.page-header--opened .main-menu {
+  @media (max-width: $mobile-width) {
+    display: flex;
+  }
+}
+
+.page-header--nojs .main-menu {
+  @media (max-width: $mobile-width) {
+    display: flex;
+  }
+}
+
+.page-header--opened.page-header::after {
+  @media (max-width: $mobile-width) {
+    background: url("../img/menuOpenBg.jpg") no-repeat;
+    background-size: cover;
   }
 }

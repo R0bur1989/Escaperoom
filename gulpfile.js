@@ -15,6 +15,29 @@ var svgstore = require("gulp-svgstore")
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var uglify = require("gulp-uglify");
+var pipeline = require("readable-stream").pipeline;
+var concat = require('gulp-concat');
+
+gulp.task('libs', function() {
+  return gulp.src('source/js/lib/*.js')
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('build/js'));
+});
+
+gulp.task('scripts', function() {
+  return gulp.src('source/js/scripts/*.js')
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('build/js'));
+});
+
+gulp.task("compress", function () {
+  return pipeline(
+        gulp.src("build/js/*.js"),
+        uglify(),
+        gulp.dest("build/js")
+  );
+});
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -85,7 +108,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
+    // "source/js/**",
     "source//*.ico"
     ], {
       base: "source"
@@ -97,5 +120,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "libs", "scripts", "compress", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));

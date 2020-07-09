@@ -15,6 +15,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    display: none;
     margin-left: initial;
     position: absolute;
     left: 50%;
