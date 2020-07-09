@@ -1,0 +1,53 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  min-height: 485px;
+  padding: 32px;
+  background: linear-gradient(0deg, #141414 0%, #1f1d1d 100%);
+  border-radius: 3px;
+
+  &--city {
+    line-height: 160%;
+    color: #e6e6e6;
+
+    h2 {
+      margin: 0 0 24px 0;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 120%;
+      color: #ffffff;
+    }
+
+    p {
+      margin: 0 0 16px 0;
+    }
+
+    p.location {
+      margin: 0 0 40px 0;
+      padding-left: 32px;
+      background-image: url("../img/gps.svg");
+      background-repeat: no-repeat;
+
+      span {
+        position: relative;
+        padding-bottom: 3px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+        }
+      }
+    }
+
+    ul {
+      @include list-reset();
+    }
+  }
+}

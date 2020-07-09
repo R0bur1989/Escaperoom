@@ -12,11 +12,14 @@ headerToggle.addEventListener('click', function () {
     pageHeader.classList.remove('page-header--closed');
     pageHeader.classList.add('page-header--opened');
 
+    headerToggle.style.backgroundImage = "url('../img/icon-close.svg')";
     intro.style.display = "none";
     footer.style.display = "flex";
   } else {
     pageHeader.classList.add('page-header--closed');
     pageHeader.classList.remove('page-header--opened');
+
+    headerToggle.style.backgroundImage = "url('../img/burger.svg')";
     intro.style.display = "block";
     footer.style.display = "none";
   }

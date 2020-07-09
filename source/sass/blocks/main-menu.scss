@@ -16,11 +16,7 @@
 
   @media (max-width: $mobile-width) {
     display: none;
-    margin-left: initial;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 96px;
+    margin: 40px auto 80px auto;
     flex-direction: column;
   }
 
