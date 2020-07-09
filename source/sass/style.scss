@@ -2,7 +2,11 @@
 @import "variables";
 @import "mixins";
 @import "general";
+@import "blocks/button";
+@import "blocks/socials";
 @import "blocks/page-header";
 @import "blocks/main-menu";
 @import "blocks/main-navigation";
-@import "blocks/user-navigation.scss";
+@import "blocks/user-navigation";
+@import "blocks/intro";
+@import "blocks/page-footer";

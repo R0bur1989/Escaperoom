@@ -22,8 +22,13 @@
     background: url("../img/mainBg.jpg") no-repeat center 0;
     z-index: -1;
 
+    @media (min-width: 1367px) {
+      background-size: cover;
+    }
+
     @media (max-width: $mobile-width) {
-      background: url("../img/mainBg-mobile.jpg") no-repeat center 0;
+      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat,
+        url("../img/mainBg-mobile.jpg") no-repeat center 0;
       min-height: 640px;
     }
   }
@@ -33,6 +38,7 @@
   width: 134px;
   height: 52px;
   background: url("../img/logo-group.svg") no-repeat;
+  flex: 0 0 auto;
 
   a {
     display: block;

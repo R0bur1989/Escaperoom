@@ -1,0 +1,35 @@
+.socials {
+  @include list-reset();
+  display: flex;
+}
+
+.socials__item {
+  margin-right: 7px;
+
+  a {
+    display: inline-block;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+  }
+
+  &--instagram {
+    a {
+      background-image: url("../img/instagram-default.svg");
+
+      &:hover {
+        background-image: url("../img/instagram-hover.svg");
+      }
+    }
+  }
+
+  &--vk {
+    a {
+      background-image: url("../img/vk-default.svg");
+
+      &:hover {
+        background-image: url("../img/vk-hover.svg");
+      }
+    }
+  }
+}

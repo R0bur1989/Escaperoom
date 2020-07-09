@@ -10,13 +10,21 @@
   display: flex;
   margin-left: auto;
 
-  a {
-    color: inherit;
-    text-decoration: none;
+  @media (max-width: 1120px) {
+    margin-left: 50px;
   }
 
   @media (max-width: $mobile-width) {
+    margin-left: initial;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 96px;
     flex-direction: column;
-    margin: 40px auto 0 auto;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 }
