@@ -46,6 +46,10 @@
       color: inherit;
       text-decoration: none;
 
+      &:hover {
+        color: $primary-color;
+      }
+
       span {
         position: relative;
         padding-bottom: 3px;
@@ -150,7 +154,9 @@
       font-style: normal;
       cursor: pointer;
 
-      &:hover {
+      &:hover,
+      &:focus {
+        outline: none;
         background: #f39425;
       }
     }
@@ -192,6 +198,10 @@
       font-size: 0;
     }
   }
+}
+
+input[type="checkbox"]:focus + label::before {
+  opacity: 1;
 }
 
 input[type="checkbox"]:checked + label::before {
@@ -268,4 +278,12 @@ input[type="checkbox"]:checked + label::before {
 
 .modal-show {
   display: block;
+}
+
+.input-correct {
+  border: 1px solid #2cdb52;
+}
+
+.input-error {
+  border: 1px solid #f2901d;
 }
