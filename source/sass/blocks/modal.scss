@@ -1,4 +1,5 @@
 .modal {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -17,16 +18,19 @@
     transform: none;
   }
 
+  h2 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 120%;
+    color: #ffffff;
+  }
+
   &--city {
     line-height: 160%;
     color: #e6e6e6;
 
     h2 {
       margin: 0 0 24px 0;
-      font-weight: 800;
-      font-size: 32px;
-      line-height: 120%;
-      color: #ffffff;
     }
 
     p {
@@ -57,6 +61,142 @@
       }
     }
   }
+
+  &--question {
+    h2 {
+      margin: 0 0 40px 0;
+    }
+
+    form {
+      .wrapper {
+        max-width: 400px;
+
+        @media (max-width: $mobile-width) {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 150%;
+      font-feature-settings: "pnum" on, "lnum" on;
+      color: #e6e6e6;
+      cursor: pointer;
+
+      margin-bottom: 12px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      background: transparent;
+      border: 1px solid rgba(250, 250, 250, 0.4);
+      border-radius: 3px;
+      padding: 15.5px 24px;
+      width: 100%;
+      margin-bottom: 32px;
+
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 144%;
+      color: #e6e6e6;
+      opacity: 0.64;
+
+      &::placeholder {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 144%;
+        color: #e6e6e6;
+        opacity: 0.64;
+      }
+    }
+
+    textarea {
+      background: transparent;
+      border: 1px solid rgba(250, 250, 250, 0.4);
+      border-radius: 3px;
+      width: 100%;
+      min-height: 120px;
+      padding: 15.5px 24px;
+      margin-bottom: 32px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 144%;
+      color: #e6e6e6;
+      opacity: 0.64;
+      resize: none;
+
+      &::placeholder {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 144%;
+        color: #e6e6e6;
+        opacity: 0.64;
+      }
+    }
+
+    .button {
+      display: block;
+      max-width: 219px;
+      margin: 0 auto 24px auto;
+      border: none;
+      background-color: #b8b8b8;
+      padding: 15px 30px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 16px;
+      font-style: normal;
+      cursor: pointer;
+
+      &:hover {
+        background: #f39425;
+      }
+    }
+
+    .agreement {
+      position: relative;
+      padding-left: 25px;
+      font-size: 14px;
+      line-height: 144%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 3px;
+        background-color: orange;
+        opacity: 0.4;
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      @media (max-width: $mobile-width) {
+        max-width: 416px;
+        margin: 0 auto;
+      }
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      font-size: 0;
+    }
+  }
+}
+
+input[type="checkbox"]:checked + label::before {
+  opacity: 1;
+  background: url("../img/checkboxActive.svg");
 }
 
 .modal__list {
@@ -108,4 +248,20 @@
   right: 32px;
   cursor: pointer;
   opacity: 0.5;
+
+  svg {
+    stroke: #ffffff;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    svg {
+      stroke: #f39425;
+    }
+  }
+}
+
+.modal--show {
+  display: block;
 }

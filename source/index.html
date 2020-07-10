@@ -62,6 +62,26 @@
       <li class="modal__list-item"><a href="#">Комсомольск-на-Амуре</a></li>
     </ul>
   </div>
+  <div class="modal modal--question">
+    <div class="modal__close">
+      <svg width="16" height="16">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </div>
+  <h2>Задайте вопрос</h2>
+  <form action="#" method="POST">
+    <div class="wrapper">
+    <label for="user-name">Чтобы мы смогли обращаться к вам, оставьте ваше имя</label>
+    <input type="text" name="user-name" id="user-name" placeholder="Имя">
+    <label for="user-email">Чтобы вы получили ответ, оставьте ваш e-mail</label>
+    <input type="email" name="user-email" id="user-email" placeholder="E-mail">
+    <label for="user-question">Ваш вопрос:</label>
+    <textarea name="user-question" id="user-question" cols="30" rows="4" placeholder="Начните вводить ..."></textarea>
+    <button type="submit" class="button">Отправить вопрос</button>
+   </div>
+   <input type="checkbox" id="agreement"><label for="agreement" class="agreement">Я согласен с <a href="">правилами обработки персональных данных</a> и пользовательским соглашением</label>
+  </form>
+  </div>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
