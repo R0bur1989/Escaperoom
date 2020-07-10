@@ -46,15 +46,20 @@
       <a href="" class="page-footer__question">Задать вопрос</a>
   </footer>
   <div class="modal modal--city">
+    <div class="modal__close">
+      <svg width="16" height="16">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </div>
     <h2>Ваш город:</h2>
-    <p class="location"><span>Определить местоположение</span></p>
+    <a  href="#" class="location"><span>Определить местоположение</span></a>
     <p>... или выберите вручную</p>
-    <ul>
-      <li>Новосибирск</li>
-      <li>Иркутск</li>
-      <li>Смоленск</li>
-      <li>Волгоград</li>
-      <li>Комсомольск-на-Амуре</li>
+    <ul class="modal__list">
+      <li class="modal__list-item modal__list-item--active"><a href="#">Новосибирск</a></li>
+      <li class="modal__list-item"><a href="#">Иркутск</a></li>
+      <li class="modal__list-item"><a href="#">Смоленск</a></li>
+      <li class="modal__list-item"><a href="#">Волгоград</a></li>
+      <li class="modal__list-item"><a href="#">Комсомольск-на-Амуре</a></li>
     </ul>
   </div>
   <script src="js/vendor.js"></script>

@@ -9,6 +9,14 @@
   background: linear-gradient(0deg, #141414 0%, #1f1d1d 100%);
   border-radius: 3px;
 
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
   &--city {
     line-height: 160%;
     color: #e6e6e6;
@@ -25,11 +33,14 @@
       margin: 0 0 16px 0;
     }
 
-    p.location {
+    a.location {
+      display: block;
       margin: 0 0 40px 0;
       padding-left: 32px;
       background-image: url("../img/gps.svg");
       background-repeat: no-repeat;
+      color: inherit;
+      text-decoration: none;
 
       span {
         position: relative;
@@ -45,9 +56,56 @@
         }
       }
     }
+  }
+}
 
-    ul {
-      @include list-reset();
+.modal__list {
+  @include list-reset();
+}
+
+.modal__list-item {
+  margin-bottom: 20px;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #ffffff;
+    opacity: 0.32;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+      opacity: 1;
     }
   }
+
+  &--active {
+    a {
+      position: relative;
+      opacity: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        border-bottom: 2px solid #f2890f;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 40px;
+  right: 32px;
+  cursor: pointer;
+  opacity: 0.5;
 }
