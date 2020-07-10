@@ -243,6 +243,8 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .modal__close {
+  border: none;
+  background: transparent;
   position: absolute;
   top: 40px;
   right: 32px;
@@ -253,8 +255,10 @@ input[type="checkbox"]:checked + label::before {
     stroke: #ffffff;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 1;
+    outline: none;
 
     svg {
       stroke: #f39425;
@@ -262,6 +266,6 @@ input[type="checkbox"]:checked + label::before {
   }
 }
 
-.modal--show {
+.modal-show {
   display: block;
 }

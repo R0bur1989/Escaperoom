@@ -1,5 +1,5 @@
-'use strict';
-console.log("sdfasfsadfsdfsdf");
+(function () {
+  "use strict";
 var pageHeader = document.querySelector('.page-header');
 var headerToggle = document.querySelector('.page-header__toggle');
 var intro =  document.querySelector('.intro');
@@ -24,3 +24,4 @@ headerToggle.addEventListener('click', function () {
     footer.style.display = "none";
   }
 });
+})();

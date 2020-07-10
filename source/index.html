@@ -43,14 +43,16 @@
         <li class="socials__item socials__item--vk"><a href="#">
         </a></li>
       </ul>
-      <a href="" class="page-footer__question">Задать вопрос</a>
+      <a href="" class="page-footer__question jsQuestion">Задать вопрос</a>
   </footer>
+  <div class="overlay">
+  </div>
   <div class="modal modal--city">
-    <div class="modal__close">
+    <button class="modal__close" aria-label="закрыть">
       <svg width="16" height="16">
         <use xlink:href="#icon-close"></use>
       </svg>
-    </div>
+    </button>
     <h2>Ваш город:</h2>
     <a  href="#" class="location"><span>Определить местоположение</span></a>
     <p>... или выберите вручную</p>
@@ -63,11 +65,11 @@
     </ul>
   </div>
   <div class="modal modal--question">
-    <div class="modal__close">
+    <button class="modal__close" aria-label="закрыть">
       <svg width="16" height="16">
         <use xlink:href="#icon-close"></use>
       </svg>
-    </div>
+    </button>
   <h2>Задайте вопрос</h2>
   <form action="#" method="POST">
     <div class="wrapper">
