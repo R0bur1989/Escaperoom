@@ -117,6 +117,16 @@
       }
     }
 
+    input[type="text"].input-correct,
+    input[type="email"].input-correct {
+      border: 1px solid #2cdb52;
+    }
+
+    input[type="text"].input-error,
+    input[type="email"].input-error {
+      border: 1px solid #f2901d;
+    }
+
     textarea {
       background: transparent;
       border: 1px solid rgba(250, 250, 250, 0.4);
@@ -278,12 +288,4 @@ input[type="checkbox"]:checked + label::before {
 
 .modal-show {
   display: block;
-}
-
-.input-correct {
-  border: 1px solid #2cdb52;
-}
-
-.input-error {
-  border: 1px solid #f2901d;
 }

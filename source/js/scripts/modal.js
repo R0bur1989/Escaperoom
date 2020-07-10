@@ -103,6 +103,11 @@
         if (!check.checked) {
           return alert("Нужно Ваше согласие на обработку персональных данных");
         }
+        if (!validate(userEmail.value))
+        {
+          console.log("ОШИБКА");
+          return userEmail.classList.add("input-error");
+        }
         overlay.classList.remove("modal-show");
         popup.classList.remove("modal-show");
         popup2.classList.remove("modal-show");
@@ -114,4 +119,13 @@
         }
       });
   }
+
+  function validate(email) {
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+    if (reg.test(email) == false) {
+       return false;
+    }
+    return true;
+ }
 })();
