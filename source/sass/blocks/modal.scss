@@ -82,6 +82,7 @@
     }
 
     label {
+      position: relative;
       display: block;
       font-weight: 500;
       font-size: 15px;
@@ -89,8 +90,11 @@
       font-feature-settings: "pnum" on, "lnum" on;
       color: #e6e6e6;
       cursor: pointer;
+      margin-bottom: 32px;
 
-      margin-bottom: 12px;
+      &[for="user-question"] {
+        margin-bottom: 12px;
+      }
     }
 
     input[type="text"],
@@ -100,7 +104,7 @@
       border-radius: 3px;
       padding: 15.5px 24px;
       width: 100%;
-      margin-bottom: 32px;
+      margin-top: 12px;
 
       font-weight: 500;
       font-size: 14px;
@@ -117,14 +121,57 @@
       }
     }
 
-    input[type="text"].input-correct,
-    input[type="email"].input-correct {
+    input[type="text"].input-correct {
       border: 1px solid #2cdb52;
     }
 
-    input[type="text"].input-error,
-    input[type="email"].input-error {
+    input[type="text"].input-error {
+      position: relative;
       border: 1px solid #f2901d;
+    }
+
+    .input-title {
+      display: none;
+      position: absolute;
+      top: 13px;
+      left: 24px;
+      padding: 0 5px;
+
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 144%;
+      font-feature-settings: "pnum" on, "lnum" on;
+      color: #e6e6e6;
+      opacity: 0.64;
+
+      background-image: linear-gradient(0deg, #141414 0%, #1f1d1d 100%);
+      z-index: 10;
+
+      @media (max-width: "455px") {
+        top: 36px;
+      }
+    }
+
+    .error-message {
+      display: none;
+      position: absolute;
+      bottom: -33px;
+      left: 24px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 144%;
+
+      font-feature-settings: "pnum" on, "lnum" on;
+      color: #f2901d;
+      opacity: 0.64;
+
+      @media (max-width: "370px") {
+        bottom: -47px;
+      }
+    }
+
+    input[type="text"].input-error + .error-message {
+      display: block;
     }
 
     textarea {

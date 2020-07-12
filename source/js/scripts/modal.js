@@ -8,6 +8,7 @@
   var closeButton = Array.prototype.slice.call(document.querySelectorAll(".modal__close"));
   var body =  document.querySelector("body");
   var locations =  Array.prototype.slice.call(popup.querySelectorAll(".modal__list-item"));
+  var titles = Array.prototype.slice.call(document.querySelectorAll(".input-title"));
 
 
 
@@ -18,15 +19,9 @@
   var form = popup2.querySelector("form");
   var userName = form.querySelector("[name=user-name]");
   var userEmail = form.querySelector("[name=user-email]");
+  var userQuestion = form.querySelector("[name=user-question]");
   var check = form.querySelector("#agreement");
 
-
-  try {
-    storageName = localStorage.getItem("user-name");
-    storageEmail = localStorage.getItem("user-email");
-  } catch (err) {
-    isStorageSupport = false;
-  }
 
   if (city) {
     city.addEventListener("click", function (evt) {
@@ -43,11 +38,18 @@
       body.classList.add("overflow-hidden");
       overlay.classList.add("modal-show");
       popup2.classList.add("modal-show");
+      try {
+        storageName = localStorage.getItem("user-name");
+        storageEmail = localStorage.getItem("user-email");
+      } catch (err) {
+        isStorageSupport = false;
+      };
       if (storageName) {
         userName.value = storageName;
         userEmail.focus();
         if (storageEmail) {
           userEmail.value = storageEmail;
+          userQuestion.focus();
         }
       } else {
         userName.focus();
@@ -73,6 +75,12 @@
         popup.classList.remove("modal-show");
         popup2.classList.remove("modal-show");
         body.classList.remove("overflow-hidden");
+        userName.classList.remove("input-correct");
+        userName.classList.remove("input-error");
+        userEmail.classList.remove("input-error");
+        titles.forEach(function(el) {
+          el.style.display = "none";
+        });
       });
     })
   }
@@ -84,6 +92,12 @@
         popup.classList.remove("modal-show");
         popup2.classList.remove("modal-show");
         body.classList.remove("overflow-hidden");
+        userName.classList.remove("input-correct");
+        userName.classList.remove("input-error");
+        userEmail.classList.remove("input-error");
+        titles.forEach(function(el) {
+          el.style.display = "none";
+        });
       }
     }
   });
@@ -95,6 +109,12 @@
     popup.classList.remove("modal-show");
     popup2.classList.remove("modal-show");
     body.classList.remove("overflow-hidden");
+    userName.classList.remove("input-correct");
+    userName.classList.remove("input-error");
+    userEmail.classList.remove("input-error");
+    titles.forEach(function(el) {
+      el.style.display = "none";
+    });
   });
 
   if (form) {
@@ -105,13 +125,30 @@
         }
         if (!validate(userEmail.value))
         {
-          console.log("ОШИБКА");
-          return userEmail.classList.add("input-error");
+          if(userName.value.length >= 1) {
+            userName.classList.remove("input-error");
+            userName.classList.add("input-correct");
+          } else {
+            userName.classList.remove("input-correct");
+            userName.classList.add("input-error");
+          }
+          userQuestion.focus();
+          titles.forEach(function(el) {
+            el.style.display = "block";
+          });
+          userEmail.classList.add("input-error");
+          return;
         }
         overlay.classList.remove("modal-show");
         popup.classList.remove("modal-show");
         popup2.classList.remove("modal-show");
         body.classList.remove("overflow-hidden");
+        userName.classList.remove("input-correct");
+        userName.classList.remove("input-error");
+        userEmail.classList.remove("input-error");
+        titles.forEach(function(el) {
+          el.style.display = "none";
+        });
 
         if (isStorageSupport) {
           localStorage.setItem("user-name", userName.value);
