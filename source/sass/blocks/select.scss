@@ -1,5 +1,10 @@
 .select {
-  margin: 48px 0 0 10%;
+  margin: 48px 10% 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 32px 0 0 0;
+    padding: 0 16px;
+  }
 
   h1 {
     font-weight: 800;
@@ -8,9 +13,13 @@
     color: #ffffff;
 
     margin: 0 0 48px 0;
+
+    @media (max-width: $mobile-width) {
+      font-size: 36px;
+    }
   }
 
-  p {
+  > p {
     font-weight: 500;
     font-size: 14px;
     line-height: 144%;
@@ -23,6 +32,11 @@
 .select__list {
   @include list-reset();
   display: flex;
+  margin-bottom: 39px;
+
+  @media (max-width: $mobile-width) {
+    overflow-x: scroll;
+  }
 }
 
 .select__item {
@@ -34,6 +48,11 @@
   padding: 0 40px 0 0;
   margin-right: 40px;
   border-right: 1px solid rgba(255, 255, 255, 0.16);
+
+  &:last-of-type {
+    border: none;
+    margin-right: 0;
+  }
 
   a {
     color: inherit;
@@ -48,13 +67,13 @@
 
   &--active {
     a {
-      position: relative;
-
       span {
+        position: relative;
+
         &::before {
           content: "";
           position: absolute;
-          bottom: -2px;
+          bottom: -5px;
           border-bottom: 2px solid #f2890f;
           width: 100%;
         }
