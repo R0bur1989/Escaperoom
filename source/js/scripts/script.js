@@ -12,7 +12,7 @@ headerToggle.addEventListener('click', function () {
     pageHeader.classList.remove('page-header--closed');
     pageHeader.classList.add('page-header--opened');
 
-    headerToggle.style.backgroundImage = "url('../img/icon-close.svg')";
+    headerToggle.style.backgroundImage = "url('../img/close.svg')";
     intro.style.display = "none";
     footer.style.display = "flex";
   } else {
