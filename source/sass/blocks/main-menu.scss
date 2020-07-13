@@ -14,7 +14,7 @@
     margin-left: 50px;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     display: none;
     margin: 40px auto 80px auto;
     flex-direction: column;

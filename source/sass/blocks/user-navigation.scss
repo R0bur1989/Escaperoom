@@ -4,7 +4,7 @@
   align-items: center;
   flex: 0 0 auto;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     align-items: center;
     order: -1;
@@ -29,7 +29,7 @@
 
       color: $primary-color;
 
-      @media (max-width: $mobile-width) {
+      @media (max-width: $tablet-width) {
         display: block;
         margin-right: initial;
         margin-bottom: 20px;
@@ -45,7 +45,7 @@
         left: -24px;
         top: -5px;
 
-        @media (max-width: $mobile-width) {
+        @media (max-width: $tablet-width) {
           left: 0;
         }
       }

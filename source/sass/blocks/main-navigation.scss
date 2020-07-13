@@ -8,7 +8,7 @@
     flex-wrap: wrap;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     align-items: center;
     margin: initial;
@@ -18,7 +18,7 @@
 .main-navigation__item:not(:last-of-type) {
   margin-right: 48px;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     margin-right: initial;
     margin-bottom: 40px;
   }
