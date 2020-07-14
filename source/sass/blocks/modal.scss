@@ -9,6 +9,7 @@
   padding: 32px;
   background: linear-gradient(0deg, #141414 0%, #1f1d1d 100%);
   border-radius: 3px;
+  z-index: 100;
 
   @media (max-width: $mobile-width) {
     width: 100%;

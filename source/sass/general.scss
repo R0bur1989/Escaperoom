@@ -12,7 +12,8 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 74px 0 0 0;
+  height: 100%;
   font-size: 17px;
   background: linear-gradient(0deg, #141414 0%, #1f1d1d 100%);
   color: #ffffff;
@@ -21,6 +22,30 @@ body {
   font-stretch: normal;
   font-style: normal;
   letter-spacing: normal;
+
+  &.index {
+    background: url("../img/mainBg.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+      @media (max-width: $mobile-width) {
+        background: linear-gradient(
+              159.27deg,
+              rgba(99, 60, 15, 0) 23.22%,
+              rgba(99, 60, 15, 0) 37.46%,
+              #24150e 89.63%,
+              #1a140d 106.79%
+            )
+            no-repeat,
+          url("../img/mainBg-mobile.jpg") no-repeat center 0;
+        background-size: cover, cover;
+        min-height: 640px;
+      }
+
+      .page-header {
+        background-color: transparent;
+      }
+  }
 }
 
 img {

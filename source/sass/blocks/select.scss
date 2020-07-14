@@ -32,10 +32,12 @@
 .select__list {
   @include list-reset();
   display: flex;
-  margin-bottom: 39px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
 
   @media (max-width: $mobile-width) {
     overflow-x: scroll;
+    flex-wrap: nowrap;
   }
 }
 
@@ -48,10 +50,12 @@
   padding: 0 40px 0 0;
   margin-right: 40px;
   border-right: 1px solid rgba(255, 255, 255, 0.16);
+  margin-bottom: 15px;
 
   &:last-of-type {
     border: none;
-    margin-right: 0;
+    margin-right: initial;
+    margin-bottom: initial;
   }
 
   a {
@@ -80,4 +84,10 @@
       }
     }
   }
+}
+
+.select__item:not(.select__item--active) a:hover,
+.select__item:not(.select__item--active) a:focus {
+  outline: none;
+  opacity: 0.5;
 }

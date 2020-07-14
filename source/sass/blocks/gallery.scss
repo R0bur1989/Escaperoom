@@ -6,8 +6,6 @@
 }
 
 .gallery__item {
-  flex: 0 0 344px;
-  height: 232px;
   margin-bottom: 32px;
 
   font-feature-settings: "pnum" on, "lnum" on;
@@ -18,25 +16,28 @@
   color: #e6e6e6;
 
   @media (max-width: $mobile-width) {
-    flex: 0 0 328px;
+    flex: 0 0 100%;
+    text-align: center;
   }
 
   &--hit {
-    position: relative;
+    a {
+      position: relative;
 
-    &::before {
-      content: "Хит";
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 144%;
-      position: absolute;
-      top: 17px;
-      right: 19px;
-      width: 70px;
-      height: 30px;
-      padding: 3px 12px 3px 30px;
-      border: 2px solid rgba(242, 137, 15, 0.74);
-      border-radius: 25px;
+      &::before {
+        content: "Хит";
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 144%;
+        position: absolute;
+        top: 17px;
+        right: 19px;
+        width: 70px;
+        height: 30px;
+        padding: 3px 12px 3px 30px;
+        border: 2px solid rgba(242, 137, 15, 0.74);
+        border-radius: 25px;
+      }
     }
   }
 
@@ -68,12 +69,19 @@
 
   a {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 344px;
+    height: 232px;
+
     padding: 129px 61px 20px 19px;
     color: inherit;
     text-decoration: none;
     background-repeat: no-repeat;
+
+    @media (max-width: $mobile-width) {
+      text-align: left;
+      width: 328px;
+      margin: 0 auto;
+    }
 
     &[data-content="crypt"] {
       background-image: url("../img/crypt-list.jpg");
