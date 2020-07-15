@@ -23,6 +23,7 @@ body {
   font-style: normal;
   letter-spacing: normal;
 
+
   &.index {
     background: url("../img/mainBg.jpg") no-repeat;
     background-size: cover;
@@ -41,10 +42,91 @@ body {
         background-size: cover, cover;
         min-height: 640px;
       }
+  }
 
-      .page-header {
-        background-color: transparent;
-      }
+  &.maniack {
+    background: url("../img/maniack.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    @media (max-width: $mobile-width) {
+      background: linear-gradient(
+            159.27deg,
+            rgba(99, 60, 15, 0) 23.22%,
+            rgba(99, 60, 15, 0) 37.46%,
+            #24150e 89.63%,
+            #1a140d 106.79%
+          )
+          no-repeat,
+        url("../img/maniack-mobile.jpg") no-repeat center 0;
+      background-size: cover, cover;
+      height: 100%;
+    }
+  }
+
+  &.mansion {
+    background: url("../img/mansion.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    @media (max-width: $mobile-width) {
+      background: linear-gradient(
+            159.27deg,
+            rgba(99, 60, 15, 0) 23.22%,
+            rgba(99, 60, 15, 0) 37.46%,
+            #24150e 89.63%,
+            #1a140d 106.79%
+          )
+          no-repeat,
+        url("../img/mansion-mobile.jpg") no-repeat center 0;
+      background-size: cover, cover;
+      height: 100%;
+    }
+  }
+
+  &.ritual {
+    background: url("../img/ritual.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    @media (max-width: $mobile-width) {
+      background: linear-gradient(
+            159.27deg,
+            rgba(99, 60, 15, 0) 23.22%,
+            rgba(99, 60, 15, 0) 37.46%,
+            #24150e 89.63%,
+            #1a140d 106.79%
+          )
+          no-repeat,
+        url("../img/ritual-mobile.jpg") no-repeat center 0;
+      background-size: cover, cover;
+      height: 100%;
+    }
+  }
+
+  &.experiment {
+    background: url("../img/experiment.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    @media (max-width: $mobile-width) {
+      background: linear-gradient(
+            159.27deg,
+            rgba(99, 60, 15, 0) 23.22%,
+            rgba(99, 60, 15, 0) 37.46%,
+            #24150e 89.63%,
+            #1a140d 106.79%
+          )
+          no-repeat,
+        url("../img/experiment-mobile.jpg") no-repeat center 0;
+      background-size: cover, cover;
+      height: 100%;
+    }
+  }
+
+
+  .page-header {
+    background-color: transparent;
   }
 }
 

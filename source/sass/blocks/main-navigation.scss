@@ -15,6 +15,12 @@
   }
 }
 
+.main-navigation__item--active {
+  a {
+    color: $primary-color;
+  }
+}
+
 .main-navigation__item:not(:last-of-type) {
   margin-right: 48px;
 

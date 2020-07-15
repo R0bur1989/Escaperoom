@@ -14,18 +14,18 @@ headerToggle.addEventListener('click', function () {
     pageHeader.classList.remove('page-header--closed');
     pageHeader.classList.add('page-header--opened');
 
-    headerToggle.style.backgroundImage = "url('../img/close.svg')";
-    pageBody.backgroundImage = "url('../img/menuOpenBg.jpg')";
-    pageBodyIndex.backgroundImage = "url('../img/menuOpenBg.jpg')";
+    headerToggle.style.backgroundImage = "url('img/close.svg')";
+    pageBody.backgroundImage = "url('img/menuOpenBg.jpg')";
+    pageBodyIndex.backgroundImage = "url('img/menuOpenBg.jpg')";
     intro.style.display = "none";
     footer.style.display = "flex";
   } else {
     pageHeader.classList.add('page-header--closed');
     pageHeader.classList.remove('page-header--opened');
 
-    pageBody.backgroundImage = "url('../img/mainBg-mobile.jpg')";
-    pageBodyIndex.backgroundImage = "url('../img/mainBg-mobile.jpg')";
-    headerToggle.style.backgroundImage = "url('../img/burger.svg')";
+    pageBody.backgroundImage = "url('img/mainBg-mobile.jpg')";
+    pageBodyIndex.backgroundImage = "url('img/mainBg-mobile.jpg')";
+    headerToggle.style.backgroundImage = "url('img/burger.svg')";
     intro.style.display = "block";
     footer.style.display = "none";
   }

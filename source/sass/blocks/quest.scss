@@ -1,0 +1,178 @@
+.quest {
+  max-width: 680px;
+  margin-top: 12vh;
+  margin-left: 44%;
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+    margin: initial;
+    padding: 0 16px;
+    padding-top: 339px;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: 92px;
+    line-height: 95%;
+    margin: 0;
+    margin-bottom: 32px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    @media (max-width: $mobile-width) {
+      font-size: 42px;
+      line-height: 110%;
+      margin-bottom: 16px;
+    }
+  }
+
+  p {
+    max-width: 520px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #e6e6e6;
+    margin: 0;
+    margin-bottom: 40px;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 23px;
+    }
+  }
+
+  .button {
+    padding: 22px 47px 23px 48px;
+  }
+}
+
+p.quest__type {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+  color: $primary-color;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.quest__info {
+  font-size: 14px;
+  line-height: 144%;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #e6e6e6;
+
+  margin-bottom: 20px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 8px;
+  }
+}
+
+.quest__home {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 30px;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 144%;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #e6e6e6;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    left: -8px;
+    top: 0;
+  }
+}
+
+.quest__time {
+  display: inline-flex;
+  position: relative;
+  padding-left: 28px;
+  padding-right: 24px;
+  margin-right: 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.36);
+
+  @media (max-width: $mobile-width) {
+    width: 72px;
+    padding-left: initial;
+    padding-top: 32px;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/clock.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.quest__quantity {
+  display: inline-flex;
+  position: relative;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-right: 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.36);
+
+  @media (max-width: $mobile-width) {
+    width: 72px;
+    padding: initial;
+    padding-top: 32px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 21px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/person.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.quest__dificulty {
+  display: inline-flex;
+  position: relative;
+  padding-left: 32px;
+
+  @media (max-width: $mobile-width) {
+    width: 72px;
+    padding: initial;
+    padding-top: 32px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/puzzle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Escape room</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="maniack">
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+  <header class="page-header page-header--nojs page-header--closed">
+    <div class="page-header__logo"><a href="index.html"></a></div>
+      <a class="page-header__toggle" href="#">Меню</a>
+    <nav class="main-menu">
+      <ul class="main-navigation">
+        <li class="main-navigation__item main-navigation__item--active"><a href="selectQuest.html">Квесты</a></li>
+        <li class="main-navigation__item"><a href="#">Новичкам</a></li>
+        <li class="main-navigation__item"><a href="#">Отзывы</a></li>
+        <li class="main-navigation__item"><a href="#">Акции</a></li>
+        <li class="main-navigation__item"><a href="#">Контакты</a></li>
+      </ul>
+      <ul class="user-navigation">
+        <li class="user-navigation__item user-navigation__item--city"><a href="" class="jsCity">Новосибирск</a></li>
+        <li class="user-navigation__item"><a href="">8 (383) 284 01 60</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="quest">
+       <a href="selectQuest.html" class="quest__home">Все квесты</a>
+      <p class="quest__type">хоррор, триллер</p>
+      <h1>Маньяк</h1>
+      <div class="quest__info">
+        <span class="quest__time">60 мин</span>
+        <span class="quest__quantity">3–4 чел</span>
+        <span class="quest__dificulty">средняя сложность</span>
+      </div>
+      <p>В комнате с приглушённым светом несколько человек, незнакомых друг с другом, приходят в себя. Никто не помнит, что произошло прошлым вечером.
+        Руки и ноги связаным, но одному из вас получилось освободиться. На стене висит пугающий таймер и запущен отсчёт<br> 60 минут.
+        Сможете ли вы разобраться в стрессовой ситуации, помочь другим, разобраться что произошло и выбраться из комнаты?</p>
+        <a href="#" class="button">Забронировать</a>
+    </section>
+  </main>
+  <footer class="page-footer">
+      <ul class="socials">
+        <li class="socials__item socials__item--instagram"><a href="#"></use>
+        </svg></a></li>
+        <li class="socials__item socials__item--vk"><a href="#">
+        </a></li>
+      </ul>
+      <a href="" class="page-footer__question jsQuestion">Задать вопрос</a>
+  </footer>
+  <div class="overlay">
+  </div>
+  <div class="modal modal--city">
+    <button class="modal__close" aria-label="закрыть">
+      <svg width="16" height="16">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+    <h2>Ваш город:</h2>
+    <a  href="#" class="location"><span>Определить местоположение</span></a>
+    <p>... или выберите вручную</p>
+    <ul class="modal__list">
+      <li class="modal__list-item modal__list-item--active"><a href="#">Новосибирск</a></li>
+      <li class="modal__list-item"><a href="#">Иркутск</a></li>
+      <li class="modal__list-item"><a href="#">Смоленск</a></li>
+      <li class="modal__list-item"><a href="#">Волгоград</a></li>
+      <li class="modal__list-item"><a href="#">Комсомольск-на-Амуре</a></li>
+    </ul>
+  </div>
+  <div class="modal modal--question">
+    <button class="modal__close" aria-label="закрыть">
+      <svg width="16" height="16">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+  <h2>Задайте вопрос</h2>
+  <form action="#" method="POST">
+    <div class="wrapper">
+    <label>Чтобы мы смогли обращаться к вам, оставьте ваше имя
+      <p class="input-title">Имя</p>
+      <input type="text" name="user-name" id="user-name" placeholder="Имя"></label>
+    <label>
+      Чтобы вы получили ответ, оставьте ваш e-mail
+    <p class="input-title">E-mail</p>
+    <input type="text" name="user-email" id="user-email" placeholder="E-mail">
+    <p class="error-message">Введён некорректный e-mail, попробуйте заново</p>
+   </label>
+    <label for="user-question">Ваш вопрос:</label>
+    <textarea name="user-question" id="user-question" cols="30" rows="4" placeholder="Начните вводить ..."></textarea>
+    <button type="submit" class="button">Отправить вопрос</button>
+   </div>
+   <input type="checkbox" id="agreement"><label for="agreement" class="agreement">Я согласен с <a href="">правилами обработки персональных данных</a> и пользовательским соглашением</label>
+  </form>
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
