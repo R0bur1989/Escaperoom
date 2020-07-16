@@ -121,6 +121,11 @@ body {
     }
   }
 
+  &.bodybook {
+    background: url("../img/orderBg.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
 
   .page-header {
     background-color: transparent;
