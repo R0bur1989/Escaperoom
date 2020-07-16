@@ -36,6 +36,11 @@
         padding-left: 24px;
       }
 
+      &:hover {
+        color: $primary-color;
+        border-bottom: 1px dashed $primary-color;
+      }
+
       &::before {
         content: "";
         position: absolute;

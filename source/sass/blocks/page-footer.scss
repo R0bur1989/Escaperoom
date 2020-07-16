@@ -14,6 +14,7 @@
 }
 
 .page-footer__question {
+  position: relative;
   text-decoration: none;
   border-bottom: 1px dashed #e6e6e6;
   padding-bottom: 0.5px;
@@ -21,4 +22,15 @@
   line-height: 144%;
   font-feature-settings: "pnum" on, "lnum" on;
   color: #e6e6e6;
+
+  &:hover {
+    color: $primary-color;
+    border-bottom: 1px dashed $primary-color;
+
+    &::before {
+      content: "?";
+      position: absolute;
+      left: -8px;
+    }
+  }
 }
