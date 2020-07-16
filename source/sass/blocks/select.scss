@@ -4,7 +4,14 @@
   width: 1104px;
   padding-right: 24px;
 
+  @media (max-width: 1150px) {
+    width: 712px;
+    padding-right: initial;
+    margin: 0 auto;
+  }
+
   @media (max-width: $mobile-width) {
+    width: 100%;
     margin: 0;
     margin-top: 32px;
     padding: 0 16px;

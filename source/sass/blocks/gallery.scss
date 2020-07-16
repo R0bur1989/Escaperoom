@@ -7,21 +7,38 @@
 .gallery__item {
   position: relative;
   margin-bottom: 32px;
-  flex: 0 0 33%;
+  margin-right: 24px;
   font-feature-settings: "pnum" on, "lnum" on;
   font-weight: 500;
   font-size: 13px;
   line-height: 144%;
-
   color: #e6e6e6;
   text-align: center;
 
-  @media (max-width: $tablet-width) {
-    flex: 0 0 50%;
+  &:nth-child(3n) {
+    margin-right: initial;
+
+    @media (max-width: 1150px) {
+      margin-right: 24px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-right: auto;
+    }
+  }
+
+  &:nth-child(2n) {
+    @media (max-width: 1150px) {
+      margin-right: initial;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-right: auto;
+    }
   }
 
   @media (max-width: $mobile-width) {
-    flex: 0 0 100%;
+    margin: 0 auto;
   }
 
   &--hit {
@@ -54,12 +71,16 @@
     z-index: -1;
   }
 
-  img.cabin {
-    clip: rect(auto, auto, 231px, auto);
+  &--cabin {
+    img {
+      clip: rect(auto, auto, 220px, auto);
+    }
   }
 
-  img.boundary {
-    clip: rect(auto, auto, auto, 2px);
+  &--boundary {
+    img {
+      clip: rect(auto, auto, auto, 2px);
+    }
   }
 
   h3 {
@@ -102,6 +123,18 @@
 
     @media (max-width: $mobile-width) {
       width: 328px;
+    }
+  }
+
+  &--mansion {
+    a {
+      padding-top: 100px;
+    }
+  }
+
+  &--experiment {
+    a {
+      padding-top: 100px;
     }
   }
 }
