@@ -3,11 +3,29 @@
   margin-top: 12vh;
   margin-left: 44%;
 
+  @media (max-width: 1200px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media (max-width: $mobile-width) {
     position: relative;
     margin: initial;
     padding: 0 16px;
     padding-top: 339px;
+    padding-bottom: 58px;
+  }
+
+  &--mansion {
+    @media (max-width: $mobile-width) {
+      padding-top: 232px;
+    }
+  }
+
+  &--experiment {
+    @media (max-width: $mobile-width) {
+      padding-top: 312px;
+    }
   }
 
   h1 {
@@ -54,6 +72,10 @@ p.quest__type {
   color: $primary-color;
   margin: 0;
   margin-bottom: 8px;
+
+  &--mansion {
+    margin-bottom: 15px;
+  }
 }
 
 .quest__info {
@@ -65,7 +87,10 @@ p.quest__type {
   margin-bottom: 20px;
 
   @media (max-width: $mobile-width) {
+    max-width: 312px;
+    margin: 0 auto 20px auto;
     padding: 0 8px;
+    text-align: center;
   }
 }
 
@@ -93,8 +118,9 @@ p.quest__type {
     position: absolute;
     width: 6px;
     height: 10px;
-    left: -8px;
-    top: 0;
+    left: -14px;
+    top: 1px;
+    background-image: url("../img/arrow-left.svg");
   }
 }
 
@@ -102,7 +128,6 @@ p.quest__type {
   display: inline-flex;
   position: relative;
   padding-left: 28px;
-  padding-right: 24px;
   margin-right: 24px;
   border-right: 1px solid rgba(255, 255, 255, 0.36);
 
@@ -110,7 +135,6 @@ p.quest__type {
     width: 72px;
     padding-left: initial;
     padding-top: 32px;
-    text-align: center;
   }
 
   &::before {
@@ -123,6 +147,10 @@ p.quest__type {
     background-image: url("../img/clock.svg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (max-width: $mobile-width) {
+      left: 15px;
+    }
   }
 }
 
@@ -150,6 +178,10 @@ p.quest__type {
     background-image: url("../img/person.svg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (max-width: $mobile-width) {
+      left: 15px;
+    }
   }
 }
 
@@ -174,5 +206,9 @@ p.quest__type {
     background-image: url("../img/puzzle.svg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (max-width: $mobile-width) {
+      left: 23px;
+    }
   }
 }
