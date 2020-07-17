@@ -120,5 +120,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "libs", "scripts", "compress", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "scripts", "compress", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));

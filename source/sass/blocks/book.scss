@@ -6,8 +6,7 @@
 
   @media (max-width: $mobile-width) {
     margin: 0;
-    margin-top: 82px;
-    padding: 0 16px 229px 16px;
+    padding: 82px 16px 229px 16px;
   }
 
   p {
@@ -31,10 +30,15 @@
     padding-bottom: 16px;
     border-bottom: 0.5px solid rgba(230, 230, 230, 0.25);
 
+    @media (max-width: "966px") {
+      padding-bottom: 35px;
+    }
+
     @media (max-width: $mobile-width) {
       font-size: 42px;
       line-height: 110%;
       margin-bottom: 40px;
+      padding-bottom: 16px;
     }
   }
 }
@@ -92,25 +96,33 @@
   position: relative;
   padding-left: 20px;
   margin-right: 24px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 144%;
+  font-feature-settings: 'pnum' on, 'lnum' on;
   color: rgba(255, 255, 255, 0.82);
 
   &::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 4px;
+    top: 0;
     width: 15px;
     height: 15px;
     border-radius: 3px;
   }
 
   &:nth-child(1) {
+    flex: 0 0 90px;
+
     &::before {
       border: 2px solid #c4c4c4;
     }
   }
 
   &:nth-child(2) {
+    flex: 0 0 72px;
+
     &::before {
       border: none;
       background: linear-gradient(158.6deg, #f2890f 9.78%, #b8600f 79.81%);
@@ -118,6 +130,7 @@
   }
 
   &:nth-child(3) {
+    flex: 0 0 115px;
     margin-right: 0;
 
     &::before {
@@ -150,6 +163,10 @@
 
     &:nth-child(6n) {
       margin-right: 0;
+
+      @media (max-width: "911px") {
+        margin-right: 32px;
+      }
     }
 
     span {
@@ -205,11 +222,14 @@ label.book__occupied {
   display: flex;
   align-items: flex-end;
 
+  @media (max-width: "966px") {
+    display: block;
+  }
+
   @media (max-width: $mobile-width) {
     top: initial;
     bottom: 144px;
     left: 17px;
-    display: block;
   }
 
   p {
@@ -274,5 +294,35 @@ label.book__occupied {
 
   @media (max-width: $mobile-width) {
     display: block;
+  }
+}
+
+.book__home {
+  display: none;
+  position: absolute;
+  top: 32px;
+  left: 30px;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 144%;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #e6e6e6;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    left: -14px;
+    top: 1px;
+    background-image: url("../img/arrow-left.svg");
   }
 }
