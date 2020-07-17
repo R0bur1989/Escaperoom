@@ -125,6 +125,14 @@ body {
     background: url("../img/orderBg.jpg") no-repeat;
     background-size: cover;
     height: 100vh;
+
+    @media (max-width: $mobile-width) {
+      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat,
+        url("../img/orderBg-mobile.png") no-repeat center 0;
+        background-color: #1a140d;
+        background-size: cover, contain;
+        height: 100%;
+    }
   }
 
   .page-header {
