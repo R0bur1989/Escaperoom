@@ -134,7 +134,7 @@
     .input-title {
       display: none;
       position: absolute;
-      top: 13px;
+      top: 26px;
       left: 24px;
       padding: 0 5px;
 
@@ -148,8 +148,9 @@
       background-image: #1f1d1d;
       z-index: 10;
 
+
       @media (max-width: "455px") {
-        top: 36px;
+        top: 49px;
       }
 
       &::before {
@@ -166,7 +167,7 @@
     .error-message {
       display: none;
       position: absolute;
-      bottom: -33px;
+      bottom: -25px;
       left: 24px;
       font-weight: 500;
       font-size: 12px;
