@@ -23,25 +23,16 @@ body {
   font-style: normal;
   letter-spacing: normal;
 
-
   &.index {
     background: url("../img/mainBg.jpg") no-repeat;
     background-size: cover;
     height: 100vh;
 
-      @media (max-width: $mobile-width) {
-        background: linear-gradient(
-              159.27deg,
-              rgba(99, 60, 15, 0) 23.22%,
-              rgba(99, 60, 15, 0) 37.46%,
-              #24150e 89.63%,
-              #1a140d 106.79%
-            )
-            no-repeat,
-          url("../img/mainBg-mobile.jpg") no-repeat center 0;
-        background-size: cover, cover;
-        min-height: 640px;
-      }
+    @media (max-width: $mobile-width) {
+      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat, url("../img/mainBg-mobile.jpg") no-repeat center 0;
+      background-size: cover, cover;
+      min-height: 640px;
+    }
   }
 
   &.maniack {
@@ -50,11 +41,10 @@ body {
     height: 100vh;
 
     @media (max-width: $mobile-width) {
-      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat,
-        url("../img/maniack-mobile.jpg") no-repeat center 0;
-        background-color: #1a140d;
-        background-size: cover, contain;
-        height: 100%;
+      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat, url("../img/maniack-mobile.jpg") no-repeat center 0;
+      background-color: #1a140d;
+      background-size: cover, contain;
+      height: 100%;
     }
   }
 
@@ -64,17 +54,9 @@ body {
     height: 100vh;
 
     @media (max-width: $mobile-width) {
-      background: linear-gradient(
-            159.27deg,
-            rgba(99, 60, 15, 0) 23.22%,
-            rgba(99, 60, 15, 0) 37.46%,
-            #24150e 89.63%,
-            #1a140d 106.79%
-          )
-          no-repeat,
-        url("../img/mansion-mobile.jpg") no-repeat center 0;
-        background-color: #1a140d;
-        background-size: cover, contain;
+      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat, url("../img/mansion-mobile.jpg") no-repeat center 0;
+      background-color: #1a140d;
+      background-size: cover, contain;
       height: 100%;
     }
   }
@@ -85,17 +67,9 @@ body {
     height: 100vh;
 
     @media (max-width: $mobile-width) {
-      background: linear-gradient(
-            159.27deg,
-            rgba(99, 60, 15, 0) 23.22%,
-            rgba(99, 60, 15, 0) 37.46%,
-            #24150e 89.63%,
-            #1a140d 106.79%
-          )
-          no-repeat,
-        url("../img/ritual-mobile.jpg") no-repeat center 0;
-        background-color: #1a140d;
-        background-size: cover, contain;
+      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat, url("../img/ritual-mobile.jpg") no-repeat center 0;
+      background-color: #1a140d;
+      background-size: cover, contain;
       height: 100%;
     }
   }
@@ -106,17 +80,9 @@ body {
     height: 100vh;
 
     @media (max-width: $mobile-width) {
-      background: linear-gradient(
-            159.27deg,
-            rgba(99, 60, 15, 0) 23.22%,
-            rgba(99, 60, 15, 0) 37.46%,
-            #24150e 89.63%,
-            #1a140d 106.79%
-          )
-          no-repeat,
-        url("../img/experiment-mobile.jpg") no-repeat center 0;
-        background-color: #1a140d;
-        background-size: cover, contain;
+      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat, url("../img/experiment-mobile.jpg") no-repeat center 0;
+      background-color: #1a140d;
+      background-size: cover, contain;
       height: 100%;
     }
   }
@@ -127,11 +93,11 @@ body {
     height: 100vh;
 
     @media (max-width: $mobile-width) {
-      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%) no-repeat,
+      background: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
         url("../img/orderBg-mobile.png") no-repeat center 0;
-        background-color: #1a140d;
-        background-size: cover, contain;
-        height: 100%;
+      background-color: #1a140d;
+
+      height: 100%;
     }
   }
 

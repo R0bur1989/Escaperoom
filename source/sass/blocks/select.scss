@@ -13,7 +13,7 @@
   @media (max-width: $mobile-width) {
     width: 100%;
     margin: 0;
-    margin-top: 32px;
+    margin-top: 13px;
     padding: 0 16px;
   }
 
@@ -23,10 +23,11 @@
     line-height: 110%;
     color: #ffffff;
 
-    margin: 0 0 48px 0;
+    margin: 0 0 52px 0;
 
     @media (max-width: $mobile-width) {
       font-size: 36px;
+      margin: 0 0 45px 0;
     }
   }
 
@@ -35,8 +36,11 @@
     font-size: 14px;
     line-height: 144%;
     color: $primary-color;
+    margin: 0 0 8px 0;
 
-    margin: 0 0 5px 0;
+    @media (max-width: $mobile-width) {
+      margin: 0 0 11px 0;
+    }
   }
 }
 
@@ -44,7 +48,7 @@
   @include list-reset();
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 
   @media (max-width: $mobile-width) {
     overflow-x: scroll;
@@ -67,6 +71,11 @@
     border: none;
     margin-right: initial;
     margin-bottom: initial;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 16px;
+    margin-right: 16px;
   }
 
   a {
@@ -92,6 +101,70 @@
           border-bottom: 2px solid #f2890f;
           width: 100%;
         }
+      }
+    }
+  }
+
+  &--allquests {
+    span {
+      min-width: 76px;
+    }
+
+    svg {
+      @media (max-width: $mobile-width) {
+        width: 21px;
+        height: 24px;
+      }
+    }
+  }
+
+  &--adventures {
+    svg {
+      @media (max-width: $mobile-width) {
+        width: 29px;
+        height: 24px;
+      }
+    }
+  }
+
+  &--horror {
+    svg {
+      @media (max-width: $mobile-width) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &--mysticism {
+    svg {
+      @media (max-width: $mobile-width) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &--detective {
+    svg {
+      @media (max-width: $mobile-width) {
+        width: 32px;
+        height: 24px;
+      }
+    }
+  }
+
+  &--sci-fi {
+    span {
+      @media (max-width: $mobile-width) {
+        min-width: 76px;
+      }
+    }
+
+    svg {
+      @media (max-width: $mobile-width) {
+        width: 23px;
+        height: 24px;
       }
     }
   }
