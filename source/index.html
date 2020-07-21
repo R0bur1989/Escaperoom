@@ -1,103 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Escape room</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="img/favicon/site.webmanifest">
-  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.min.css">
+  <title>Escape room</title>
 </head>
-<body class="index">
-  <div style="display: none;">
-    <include src="build/img/sprite_auto.svg"></include>
+<body class="bodynavigation">
+  <div class="navigation">
+    <a href="main.html">Главная</a>
+    <a href="selectQuest.html">Выбор квеста</a>
+    <a href="maniack.html">Конкретный квест(маньяк)</a>
+    <a href="mansion.html">Конкретный квест(особняк)</a>
+    <a href="ritual.html">Конкретный квест(ритуал)</a>
+    <a href="experiment.html">Конкретный квест(эксперимент)</a>
+    <a href="book.html">Заказ квеста</a>
   </div>
-  <header class="page-header page-header--index page-header--nojs page-header--closed">
-    <div class="page-header__logo"><a></a></div>
-      <a class="page-header__toggle" href="#">Меню</a>
-    <nav class="main-menu">
-      <ul class="main-navigation">
-        <li class="main-navigation__item"><a href="selectQuest.html">Квесты</a></li>
-        <li class="main-navigation__item"><a href="#">Новичкам</a></li>
-        <li class="main-navigation__item"><a href="#">Отзывы</a></li>
-        <li class="main-navigation__item"><a href="#">Акции</a></li>
-        <li class="main-navigation__item"><a href="#">Контакты</a></li>
-      </ul>
-      <ul class="user-navigation">
-        <li class="user-navigation__item user-navigation__item--city"><a href="" class="jsCity">Новосибирск</a></li>
-        <li class="user-navigation__item"><a href="tel:+73832840160">8 (383) 284 01 60</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="intro">
-      <h1>Лучшие квесты<br> в Новосибирске</h1>
-      <p>Надоело проводить свободное время лёжа на диване?
-        Игровые площадки questroom на целый час погружают вас в мир незабываемых авантюр. Ищите подсказки, решайте головоломки и находите выход из комнаты!</p>
-        <a  href="selectQuest.html" class="button">Выбрать квест</a>
-    </section>
-  </main>
-  <footer class="page-footer">
-      <ul class="socials">
-        <li class="socials__item socials__item--instagram"><a href="#"></use>
-        </svg></a></li>
-        <li class="socials__item socials__item--vk"><a href="#">
-        </a></li>
-      </ul>
-      <a href="" class="page-footer__question jsQuestion">Задать вопрос</a>
-  </footer>
-  <div class="overlay">
-  </div>
-  <div class="overlay-menu">
-  </div>
-  <div class="modal modal--city">
-    <button class="modal__close" aria-label="закрыть">
-      <svg width="16" height="16">
-        <use xlink:href="#icon-close"></use>
-      </svg>
-    </button>
-    <h2>Ваш город:</h2>
-    <a  href="#" class="location"><span>Определить местоположение</span></a>
-    <p>... или выберите вручную</p>
-    <ul class="modal__list">
-      <li class="modal__list-item modal__list-item--active"><a href="#">Новосибирск</a></li>
-      <li class="modal__list-item"><a href="#">Иркутск</a></li>
-      <li class="modal__list-item"><a href="#">Смоленск</a></li>
-      <li class="modal__list-item"><a href="#">Волгоград</a></li>
-      <li class="modal__list-item"><a href="#">Комсомольск-на-Амуре</a></li>
-    </ul>
-  </div>
-  <div class="modal modal--question">
-    <button class="modal__close" aria-label="закрыть">
-      <svg width="16" height="16">
-        <use xlink:href="#icon-close"></use>
-      </svg>
-    </button>
-  <h2>Задайте вопрос</h2>
-  <form action="#" method="POST">
-    <div class="wrapper">
-    <label>Чтобы мы смогли обращаться к вам, оставьте ваше имя
-      <span class="input-title">Имя</span>
-      <input type="text" name="user-name" id="user-name" placeholder="Имя"></label>
-    <label>
-      Чтобы вы получили ответ, оставьте ваш e-mail
-    <span class="input-title">E-mail</span>
-    <input type="text" name="user-email" id="user-email" placeholder="E-mail">
-    <span class="error-message">Введён некорректный e-mail, попробуйте заново</span>
-   </label>
-    <label for="user-question">Ваш вопрос:</label>
-    <textarea name="user-question" id="user-question" cols="30" rows="4" placeholder="Начните вводить ..."></textarea>
-    <button type="submit" class="button">Отправить вопрос</button>
-   </div>
-   <input type="checkbox" id="agreement"><label for="agreement" class="agreement">Я согласен с <a href="">правилами обработки персональных данных</a> и пользовательским соглашением</label>
-  </form>
-  </div>
-  <script src="js/main.js"></script>
 </body>
 </html>

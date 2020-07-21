@@ -3,6 +3,10 @@
   margin-top: 10vh;
   margin-left: 44%;
 
+  @media (max-width: $tablet-width) {
+    margin: 10vh auto 0 auto;
+  }
+
   @media (max-width: $mobile-width) {
     position: relative;
     margin: initial;

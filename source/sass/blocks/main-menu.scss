@@ -8,11 +8,7 @@
   font-feature-settings: "pnum" on, "lnum" on;
 
   display: flex;
-  margin-left: auto;
-
-  @media (max-width: 1120px) {
-    margin-left: 50px;
-  }
+  margin-left: 50px;
 
   @media (max-width: $tablet-width) {
     width: 100%;

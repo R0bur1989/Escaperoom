@@ -4,6 +4,7 @@ var pageHeader = document.querySelector('.page-header');
 var headerToggle = document.querySelector('.page-header__toggle');
 var overlayMenu = document.querySelector(".overlay-menu");
 var footer = document.querySelector(".page-footer");
+var body =  document.querySelector("body");
 
 pageHeader.classList.remove('page-header--nojs');
 
@@ -14,12 +15,14 @@ headerToggle.addEventListener('click', function () {
     headerToggle.style.backgroundImage = "url('img/close.svg')";
     overlayMenu.classList.add("modal-show");
     footer.style.display = "flex";
+    body.classList.add("overflow-hidden");
   } else {
     pageHeader.classList.add('page-header--closed');
     pageHeader.classList.remove('page-header--opened');
     headerToggle.style.backgroundImage = "url('img/burger.svg')";
     overlayMenu.classList.remove("modal-show");
     footer.style.display = "none";
+    body.classList.remove("overflow-hidden");
   }
 });
 })();

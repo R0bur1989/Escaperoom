@@ -6,11 +6,11 @@
   var popup = document.querySelector(".modal--city");
   var popup2 = document.querySelector(".modal--question");
   var closeButton = Array.prototype.slice.call(document.querySelectorAll(".modal__close"));
-  var body =  document.querySelector("body");
+  var pageBody =  document.querySelector("body");
   var locations =  Array.prototype.slice.call(popup.querySelectorAll(".modal__list-item"));
   var titles = Array.prototype.slice.call(document.querySelectorAll(".input-title"));
 
-
+  console.log(pageBody);
 
   var isStorageSupport = true;
   var storageName = "";
@@ -26,7 +26,7 @@
   if (city) {
     city.addEventListener("click", function (evt) {
       evt.preventDefault();
-      body.classList.add("overflow-hidden");
+      pageBody.classList.add("overflow-hidden");
       overlay.classList.add("modal-show");
       popup.classList.add("modal-show");
     });
@@ -35,7 +35,7 @@
   if (question) {
     question.addEventListener("click", function (evt) {
       evt.preventDefault();
-      body.classList.add("overflow-hidden");
+      pageBody.classList.add("overflow-hidden");
       overlay.classList.add("modal-show");
       popup2.classList.add("modal-show");
       try {
@@ -74,7 +74,7 @@
         overlay.classList.remove("modal-show");
         popup.classList.remove("modal-show");
         popup2.classList.remove("modal-show");
-        body.classList.remove("overflow-hidden");
+        pageBody.classList.remove("overflow-hidden");
         userName.classList.remove("input-correct");
         userName.classList.remove("input-error");
         userEmail.classList.remove("input-error");
@@ -91,7 +91,7 @@
         overlay.classList.remove("modal-show");
         popup.classList.remove("modal-show");
         popup2.classList.remove("modal-show");
-        body.classList.remove("overflow-hidden");
+        pageBody.classList.remove("overflow-hidden");
         userName.classList.remove("input-correct");
         userName.classList.remove("input-error");
         userEmail.classList.remove("input-error");
@@ -108,7 +108,7 @@
     overlay.classList.remove("modal-show");
     popup.classList.remove("modal-show");
     popup2.classList.remove("modal-show");
-    body.classList.remove("overflow-hidden");
+    pageBody.classList.remove("overflow-hidden");
     userName.classList.remove("input-correct");
     userName.classList.remove("input-error");
     userEmail.classList.remove("input-error");
@@ -142,7 +142,7 @@
         overlay.classList.remove("modal-show");
         popup.classList.remove("modal-show");
         popup2.classList.remove("modal-show");
-        body.classList.remove("overflow-hidden");
+        pageBody.classList.remove("overflow-hidden");
         userName.classList.remove("input-correct");
         userName.classList.remove("input-error");
         userEmail.classList.remove("input-error");

@@ -1,8 +1,10 @@
 .main-navigation {
   @include list-reset();
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-right: 139px;
+  margin-bottom: -10px;
 
   @media (max-width: 1120px) {
     flex-wrap: wrap;
@@ -19,6 +21,10 @@
   a {
     color: $primary-color;
   }
+}
+
+.main-navigation__item {
+  margin-bottom: 10px;
 }
 
 .main-navigation__item:not(:last-of-type) {
